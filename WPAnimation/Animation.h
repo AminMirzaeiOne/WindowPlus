@@ -8,6 +8,11 @@ using namespace System::Diagnostics;
 
 namespace WPAnimation {
 
+	enum AnimationTypes
+	{
+		Transparent,
+	};
+
 	/// <summary>
 	/// Summary for Animation
 	/// </summary>
@@ -30,6 +35,19 @@ namespace WPAnimation {
 			container->Add(this);
 			InitializeComponent();
 		}
+
+
+
+		int i;
+		void putprop(int j) {
+			i = j;
+		}
+
+		int getprop() {
+			return i;
+		}
+
+		__declspec(property(get = getprop, put = putprop)) int the_prop;
 
 	protected:
 		/// <summary>
